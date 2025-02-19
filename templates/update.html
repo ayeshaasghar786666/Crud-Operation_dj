@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block text %}
+<div class="div row">
+    <div class="div col-sm-5">
+        <h2 class="alert alert-danger"><i>Update Student Data</i></h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ forms.as_p }}
+            <input type="submit" value="Update" class="btn btn-dark">
+            <a href="{% url 'add' %}" class="btn btn-light">Go Back to Home</a>
+        </form>
+    </div>
+</div>
+    
+{% endblock text %}
+    
